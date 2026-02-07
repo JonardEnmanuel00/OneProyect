@@ -59,7 +59,7 @@
             // button1
             // 
             button1.Font = new Font("Pink Rose", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(481, 78);
+            button1.Location = new Point(484, 78);
             button1.Name = "button1";
             button1.Size = new Size(392, 203);
             button1.TabIndex = 2;
