@@ -30,6 +30,8 @@
         {
             label1 = new Label();
             label2 = new Label();
+            textBox1 = new TextBox();
+            label3 = new Label();
             button1 = new Button();
             SuspendLayout();
             // 
@@ -52,20 +54,36 @@
             label2.Font = new Font("Pink Rose", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(603, 284);
             label2.Name = "label2";
-            label2.Size = new Size(150, 27);
+            label2.Size = new Size(0, 27);
             label2.TabIndex = 1;
-            label2.Text = "Esperando clic...";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(449, 152);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(470, 27);
+            textBox1.TabIndex = 2;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Pink Rose", 16.2F);
+            label3.Location = new Point(646, 107);
+            label3.Name = "label3";
+            label3.Size = new Size(39, 33);
+            label3.TabIndex = 3;
+            label3.Text = "....";
             // 
             // button1
             // 
-            button1.Font = new Font("Pink Rose", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(484, 78);
+            button1.Font = new Font("Pink Rose", 16.2F);
+            button1.Location = new Point(552, 185);
             button1.Name = "button1";
-            button1.Size = new Size(392, 203);
-            button1.TabIndex = 2;
-            button1.Text = "Haz clic aquí";
+            button1.Size = new Size(274, 71);
+            button1.TabIndex = 4;
+            button1.Text = "Mostrar mensaje";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += button1_Click_1;
             // 
             // Form1
             // 
@@ -74,10 +92,12 @@
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(1340, 561);
             Controls.Add(button1);
+            Controls.Add(label3);
+            Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Jonard";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -86,6 +106,8 @@
 
         private Label label1;
         private Label label2;
+        private TextBox textBox1;
+        private Label label3;
         private Button button1;
     }
 }
