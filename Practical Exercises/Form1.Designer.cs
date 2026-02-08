@@ -68,7 +68,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Pink Rose", 16.2F);
-            label3.Location = new Point(646, 107);
+            label3.Location = new Point(654, 107);
             label3.Name = "label3";
             label3.Size = new Size(39, 33);
             label3.TabIndex = 3;
