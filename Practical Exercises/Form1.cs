@@ -1,3 +1,5 @@
+using System.Diagnostics.Eventing.Reader;
+
 namespace Practical_Exercises
 {
     public partial class Form1 : Form
@@ -10,16 +12,43 @@ namespace Practical_Exercises
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            double numero1 = double.Parse(textBox1.Text);
-            double numero2 = double.Parse(textBox2.Text);
 
-            double resultado = numero1 + numero2;
-            label3.Text = "El resultado de la suma es " + resultado.ToString();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                label3.Text = "Has Seleccionado Chocolate";
+            }
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                label3.Text = "Has Selecionado El Sabor Chocolate";
+            }
+
+            else if (radioButton2.Checked == true)
+            {
+                label3.Text = "Has Seleccionado El sabor Vainilla";
+            }
+
+            else if (radioButton3.Checked == true)
+            {
+                label3.Text = "Has Seleccionado El sabor Fresa";
+            }
         }
     }
 }

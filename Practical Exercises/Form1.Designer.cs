@@ -1,4 +1,7 @@
-﻿namespace Practical_Exercises
+﻿
+using System.Diagnostics.Eventing.Reader;
+
+namespace Practical_Exercises
 {
     partial class Form1
     {
@@ -31,17 +34,19 @@
             components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            label3 = new Label();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            label3 = new Label();
+            button1 = new Button();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
+            radioButton3 = new RadioButton();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = SystemColors.ButtonHighlight;
+            label1.BackColor = SystemColors.ActiveCaption;
             label1.Font = new Font("Pink Rose", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(331, 26);
             label1.Name = "label1";
@@ -60,54 +65,84 @@
             label2.Size = new Size(0, 27);
             label2.TabIndex = 1;
             // 
-            // textBox1
-            // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.Font = new Font("Pink Rose", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(331, 104);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(269, 51);
-            textBox1.TabIndex = 2;
-            textBox1.TextAlign = HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Pink Rose", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(748, 104);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(269, 51);
-            textBox2.TabIndex = 3;
-            textBox2.TextAlign = HorizontalAlignment.Center;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Pink Rose", 16.2F);
-            button1.Location = new Point(606, 97);
-            button1.Name = "button1";
-            button1.Size = new Size(136, 62);
-            button1.TabIndex = 4;
-            button1.Text = "Sumar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += Button1_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = SystemColors.ButtonHighlight;
-            label3.Font = new Font("Pink Rose", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(606, 185);
-            label3.Name = "label3";
-            label3.Size = new Size(140, 40);
-            label3.TabIndex = 5;
-            label3.Text = "Resultado";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            label3.Click += label3_Click;
-            // 
             // contextMenuStrip1
             // 
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = SystemColors.ActiveCaption;
+            label3.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(782, 200);
+            label3.Name = "label3";
+            label3.Size = new Size(86, 45);
+            label3.TabIndex = 5;
+            label3.Text = "Sabor";
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ActiveCaption;
+            button1.Font = new Font("Agency FB", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(223, 332);
+            button1.Name = "button1";
+            button1.Size = new Size(357, 54);
+            button1.TabIndex = 6;
+            button1.Text = "Aceptar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.BackColor = Color.RosyBrown;
+            radioButton1.Font = new Font("Agency FB", 18F);
+            radioButton1.Location = new Point(331, 147);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(125, 40);
+            radioButton1.TabIndex = 7;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Chocolate";
+            radioButton1.UseVisualStyleBackColor = false;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.BackColor = Color.MistyRose;
+            radioButton2.Font = new Font("Agency FB", 18F);
+            radioButton2.Location = new Point(331, 205);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(99, 40);
+            radioButton2.TabIndex = 8;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Vainilla";
+            radioButton2.UseVisualStyleBackColor = false;
+            // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.BackColor = Color.IndianRed;
+            radioButton3.Font = new Font("Agency FB", 18F);
+            radioButton3.Location = new Point(331, 265);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(86, 40);
+            radioButton3.TabIndex = 9;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "Fresa";
+            radioButton3.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = SystemColors.ActiveCaption;
+            label4.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(223, 83);
+            label4.Name = "label4";
+            label4.Size = new Size(357, 45);
+            label4.TabIndex = 10;
+            label4.Text = "¿Que Sabor De Helado Desea?";
             // 
             // Form1
             // 
@@ -115,10 +150,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(1340, 561);
-            Controls.Add(label3);
+            Controls.Add(label4);
+            Controls.Add(radioButton3);
+            Controls.Add(radioButton2);
+            Controls.Add(radioButton1);
             Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form1";
@@ -127,14 +164,24 @@
             PerformLayout();
         }
 
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+          if (radioButton2.Checked == true)
+            {
+                label3.Text = "Has seleccionado Fresa";
+            }
+        }
+
         #endregion
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
-        private Label label3;
         private ContextMenuStrip contextMenuStrip1;
+        private Label label3;
+        private Button button1;
+        private RadioButton radioButton1;
+        private RadioButton radioButton2;
+        private RadioButton radioButton3;
+        private Label label4;
     }
 }
