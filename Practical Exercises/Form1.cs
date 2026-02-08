@@ -7,14 +7,19 @@ namespace Practical_Exercises
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            double numero1 = double.Parse(textBox1.Text);
+            double numero2 = double.Parse(textBox2.Text);
+
+            double resultado = numero1 + numero2;
+            label3.Text = "El resultado de la suma es " + resultado.ToString();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-            label3.Text = textBox1.Text;
+
         }
     }
 }
