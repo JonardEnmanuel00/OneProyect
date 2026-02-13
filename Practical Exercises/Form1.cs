@@ -22,22 +22,18 @@ namespace Practical_Exercises
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            listBox1.Items.Add(textBox1.Text);
+            if (comboBox1.Text == "Azul")
+            {
+                this.BackColor = Color.Blue;
+            }
+            else if (comboBox1.Text == "Rojo")
+            {
+                this.BackColor = Color.Red;
+            }
+            else if (comboBox1.Text == "Verde")
+            {
+                this.BackColor = Color.Green;
+            }
         }
     }
 }

@@ -36,9 +36,6 @@ namespace Practical_Exercises
             label2 = new Label();
             contextMenuStrip1 = new ContextMenuStrip(components);
             label4 = new Label();
-            listBox1 = new ListBox();
-            button1 = new Button();
-            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -74,41 +71,11 @@ namespace Practical_Exercises
             label4.AutoSize = true;
             label4.BackColor = SystemColors.Control;
             label4.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(498, 86);
+            label4.Location = new Point(500, 90);
             label4.Name = "label4";
-            label4.Size = new Size(319, 45);
+            label4.Size = new Size(332, 45);
             label4.TabIndex = 10;
-            label4.Text = "¡Agrega un nuevo elemento!";
-            label4.Click += label4_Click;
-            // 
-            // listBox1
-            // 
-            listBox1.Font = new Font("Agency FB", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(331, 163);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(686, 102);
-            listBox1.TabIndex = 11;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Agency FB", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(795, 286);
-            button1.Name = "button1";
-            button1.Size = new Size(222, 57);
-            button1.TabIndex = 12;
-            button1.Text = "Guardar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(331, 292);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(249, 51);
-            textBox1.TabIndex = 13;
+            label4.Text = "¡Elige un color para tu fondo!";
             // 
             // Form1
             // 
@@ -116,9 +83,6 @@ namespace Practical_Exercises
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(1340, 561);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
-            Controls.Add(listBox1);
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -136,8 +100,5 @@ namespace Practical_Exercises
         private Label label2;
         private ContextMenuStrip contextMenuStrip1;
         private Label label4;
-        private ListBox listBox1;
-        private Button button1;
-        private TextBox textBox1;
     }
 }
