@@ -37,7 +37,7 @@ namespace Practical_Exercises
             contextMenuStrip1 = new ContextMenuStrip(components);
             label4 = new Label();
             button1 = new Button();
-            dateTimePicker1 = new DateTimePicker();
+            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -73,30 +73,33 @@ namespace Practical_Exercises
             label4.AutoSize = true;
             label4.BackColor = SystemColors.Control;
             label4.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(531, 87);
+            label4.Location = new Point(577, 228);
             label4.Name = "label4";
-            label4.Size = new Size(236, 45);
+            label4.Size = new Size(127, 45);
             label4.TabIndex = 10;
-            label4.Text = "Fecha Seleccionada";
+            label4.Text = "Resultado";
             // 
             // button1
             // 
             button1.Font = new Font("Agency FB", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(531, 207);
+            button1.Location = new Point(408, 161);
             button1.Name = "button1";
-            button1.Size = new Size(236, 74);
+            button1.Size = new Size(459, 53);
             button1.TabIndex = 11;
-            button1.Text = "Ver Fecha";
+            button1.Text = "Convertir a Fahrenheit";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
             // 
-            // dateTimePicker1
+            // textBox1
             // 
-            dateTimePicker1.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Location = new Point(441, 135);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(424, 51);
-            dateTimePicker1.TabIndex = 12;
+            textBox1.Anchor = AnchorStyles.None;
+            textBox1.Font = new Font("Agency FB", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(543, 100);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(211, 55);
+            textBox1.TabIndex = 12;
+            textBox1.Text = "0";
+            textBox1.TextAlign = HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -104,7 +107,7 @@ namespace Practical_Exercises
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(1340, 561);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(label2);
@@ -124,6 +127,6 @@ namespace Practical_Exercises
         private ContextMenuStrip contextMenuStrip1;
         private Label label4;
         private Button button1;
-        private DateTimePicker dateTimePicker1;
+        private TextBox textBox1;
     }
 }
