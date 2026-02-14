@@ -23,8 +23,8 @@ namespace Practical_Exercises
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            label4.Text = "La fecha es: " + dateTimePicker1.Value.ToShortDateString();
 
-            MessageBox.Show("Hola, soy Jonard Enmanuel y mi matricula es LR-2024-02135");
         }
     
     }

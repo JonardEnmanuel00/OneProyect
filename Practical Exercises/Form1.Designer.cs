@@ -37,6 +37,7 @@ namespace Practical_Exercises
             contextMenuStrip1 = new ContextMenuStrip(components);
             label4 = new Label();
             button1 = new Button();
+            dateTimePicker1 = new DateTimePicker();
             SuspendLayout();
             // 
             // label1
@@ -72,22 +73,30 @@ namespace Practical_Exercises
             label4.AutoSize = true;
             label4.BackColor = SystemColors.Control;
             label4.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(572, 80);
+            label4.Location = new Point(531, 87);
             label4.Name = "label4";
-            label4.Size = new Size(165, 45);
+            label4.Size = new Size(236, 45);
             label4.TabIndex = 10;
-            label4.Text = "Toca El Boton";
+            label4.Text = "Fecha Seleccionada";
             // 
             // button1
             // 
             button1.Font = new Font("Agency FB", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(554, 152);
+            button1.Location = new Point(531, 207);
             button1.Name = "button1";
-            button1.Size = new Size(213, 74);
+            button1.Size = new Size(236, 74);
             button1.TabIndex = 11;
-            button1.Text = "Click";
+            button1.Text = "Ver Fecha";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePicker1.Location = new Point(441, 135);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(424, 51);
+            dateTimePicker1.TabIndex = 12;
             // 
             // Form1
             // 
@@ -95,6 +104,7 @@ namespace Practical_Exercises
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(1340, 561);
+            Controls.Add(dateTimePicker1);
             Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(label2);
@@ -114,5 +124,6 @@ namespace Practical_Exercises
         private ContextMenuStrip contextMenuStrip1;
         private Label label4;
         private Button button1;
+        private DateTimePicker dateTimePicker1;
     }
 }
