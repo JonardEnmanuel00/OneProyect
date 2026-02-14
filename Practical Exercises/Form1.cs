@@ -20,13 +20,19 @@ namespace Practical_Exercises
 
         }
 
-        int contador = 0;
+
 
         private void button1_Click_1(object sender, EventArgs e)
         {
 
-            contador++;
-            label4.Text = "Clics: " + contador;
+            if (double.TryParse(textBox1.Text, out _))
+            {
+                MessageBox.Show("Es un número válido");
+            }
+            else
+            {
+                MessageBox.Show("Error: Ingresa solo números");
+            }
         }
     
     }
