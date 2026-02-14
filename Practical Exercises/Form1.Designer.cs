@@ -35,9 +35,14 @@ namespace Practical_Exercises
             label1 = new Label();
             label2 = new Label();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            label4 = new Label();
             button1 = new Button();
-            textBox1 = new TextBox();
+            button2 = new Button();
+            progressBar1 = new ProgressBar();
+            timer1 = new System.Windows.Forms.Timer(components);
+            timer2 = new System.Windows.Forms.Timer(components);
+            timer3 = new System.Windows.Forms.Timer(components);
+            timer4 = new System.Windows.Forms.Timer(components);
+            timer5 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
@@ -68,48 +73,51 @@ namespace Practical_Exercises
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = SystemColors.Control;
-            label4.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(577, 228);
-            label4.Name = "label4";
-            label4.Size = new Size(127, 45);
-            label4.TabIndex = 10;
-            label4.Text = "Resultado";
-            // 
             // button1
             // 
-            button1.Font = new Font("Agency FB", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(408, 161);
+            button1.BackColor = Color.GreenYellow;
+            button1.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(484, 182);
             button1.Name = "button1";
-            button1.Size = new Size(459, 53);
-            button1.TabIndex = 11;
-            button1.Text = "Convertir a Fahrenheit";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            button1.Size = new Size(148, 52);
+            button1.TabIndex = 2;
+            button1.Text = "Iniciar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_2;
             // 
-            // textBox1
+            // button2
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.Font = new Font("Agency FB", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(543, 100);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(211, 55);
-            textBox1.TabIndex = 12;
-            textBox1.Text = "0";
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            button2.BackColor = Color.OrangeRed;
+            button2.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Location = new Point(690, 183);
+            button2.Name = "button2";
+            button2.Size = new Size(148, 51);
+            button2.TabIndex = 3;
+            button2.Text = "Detener";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // progressBar1
+            // 
+            progressBar1.ForeColor = Color.OliveDrab;
+            progressBar1.Location = new Point(484, 147);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(354, 29);
+            progressBar1.TabIndex = 4;
+            // 
+            // timer5
+            // 
+            timer5.Tick += timer5_Tick;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(1340, 561);
-            Controls.Add(textBox1);
+            ClientSize = new Size(1158, 565);
+            Controls.Add(progressBar1);
+            Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form1";
@@ -125,8 +133,13 @@ namespace Practical_Exercises
         private Label label1;
         private Label label2;
         private ContextMenuStrip contextMenuStrip1;
-        private Label label4;
         private Button button1;
-        private TextBox textBox1;
+        private Button button2;
+        private ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
+        public System.Windows.Forms.Timer timer4;
+        public System.Windows.Forms.Timer timer5;
     }
 }
