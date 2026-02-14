@@ -9,7 +9,6 @@ namespace Practical_Exercises
             InitializeComponent();
         }
 
-
         private void Button1_Click(object sender, EventArgs e)
         {
 
@@ -25,14 +24,7 @@ namespace Practical_Exercises
         private void button1_Click_1(object sender, EventArgs e)
         {
 
-            if (double.TryParse(textBox1.Text, out _))
-            {
-                MessageBox.Show("Es un número válido");
-            }
-            else
-            {
-                MessageBox.Show("Error: Ingresa solo números");
-            }
+            MessageBox.Show("Hola, soy Jonard Enmanuel y mi matricula es LR-2024-02135");
         }
     
     }

@@ -37,7 +37,6 @@ namespace Practical_Exercises
             contextMenuStrip1 = new ContextMenuStrip(components);
             label4 = new Label();
             button1 = new Button();
-            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -73,30 +72,22 @@ namespace Practical_Exercises
             label4.AutoSize = true;
             label4.BackColor = SystemColors.Control;
             label4.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(539, 83);
+            label4.Location = new Point(572, 80);
             label4.Name = "label4";
-            label4.Size = new Size(223, 45);
+            label4.Size = new Size(165, 45);
             label4.TabIndex = 10;
-            label4.Text = "Coloca Un Numero";
+            label4.Text = "Toca El Boton";
             // 
             // button1
             // 
             button1.Font = new Font("Agency FB", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(549, 237);
+            button1.Location = new Point(554, 152);
             button1.Name = "button1";
             button1.Size = new Size(213, 74);
             button1.TabIndex = 11;
-            button1.Text = "Validar";
+            button1.Text = "Click";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Agency FB", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(331, 161);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(686, 55);
-            textBox1.TabIndex = 12;
             // 
             // Form1
             // 
@@ -104,7 +95,6 @@ namespace Practical_Exercises
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(1340, 561);
-            Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(label2);
@@ -124,6 +114,5 @@ namespace Practical_Exercises
         private ContextMenuStrip contextMenuStrip1;
         private Label label4;
         private Button button1;
-        private TextBox textBox1;
     }
 }
