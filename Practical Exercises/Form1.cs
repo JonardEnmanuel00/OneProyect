@@ -20,20 +20,14 @@ namespace Practical_Exercises
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        int contador = 0;
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "Azul")
-            {
-                this.BackColor = Color.Blue;
-            }
-            else if (comboBox1.Text == "Rojo")
-            {
-                this.BackColor = Color.Red;
-            }
-            else if (comboBox1.Text == "Verde")
-            {
-                this.BackColor = Color.Green;
-            }
+
+            contador++;
+            label4.Text = "Clics: " + contador;
         }
+    
     }
 }

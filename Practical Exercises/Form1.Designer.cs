@@ -36,6 +36,7 @@ namespace Practical_Exercises
             label2 = new Label();
             contextMenuStrip1 = new ContextMenuStrip(components);
             label4 = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -71,11 +72,22 @@ namespace Practical_Exercises
             label4.AutoSize = true;
             label4.BackColor = SystemColors.Control;
             label4.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(500, 90);
+            label4.Location = new Point(603, 84);
             label4.Name = "label4";
-            label4.Size = new Size(332, 45);
+            label4.Size = new Size(85, 45);
             label4.TabIndex = 10;
-            label4.Text = "¡Elige un color para tu fondo!";
+            label4.Text = "Clicks";
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Agency FB", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(549, 147);
+            button1.Name = "button1";
+            button1.Size = new Size(213, 74);
+            button1.TabIndex = 11;
+            button1.Text = "Contador";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // Form1
             // 
@@ -83,6 +95,7 @@ namespace Practical_Exercises
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(1340, 561);
+            Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -100,5 +113,6 @@ namespace Practical_Exercises
         private Label label2;
         private ContextMenuStrip contextMenuStrip1;
         private Label label4;
+        private Button button1;
     }
 }
