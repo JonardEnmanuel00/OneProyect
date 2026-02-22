@@ -1,4 +1,5 @@
 using System.Diagnostics.Eventing.Reader;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Practical_Exercises
 {
@@ -20,55 +21,33 @@ namespace Practical_Exercises
         }
 
 
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            timer5.Start();
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            timer5.Stop();
-        }
-
-
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click_3(object sender, EventArgs e)
+        int totalSegundos;
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            int numero = int.Parse(textBox1.Text);
-
-            listBox1.Items.Clear();
-
-            for (int i = 1; i <= 10; i++)
-            {
-
-         
-
-            int resultado = numero * i;
-
-            listBox1.Items.Add(numero + " x " + i + " = " + resultado);
-
-
-            }
-
+            totalSegundos = ((int)numMinutos.Value * 60) + (int)numSegundos.Value;
+            timer9.Start();
         }
 
+        private void timer9_Tick(object sender, EventArgs e)
+        {
+            if (totalSegundos > 0)
+            {
+                totalSegundos--;
+            
+                this.Text = "Tiempo: " + totalSegundos;
+            }
+            else
+            {
+                timer9.Stop();
+                MessageBox.Show("¡Tiempo agotado!");
+            }
+        }
     }
+
 }
