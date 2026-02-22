@@ -25,29 +25,54 @@ namespace Practical_Exercises
         {
 
         }
-
-        int totalSegundos;
-
-        private void button1_Click_1(object sender, EventArgs e)
+     
+        private void button1_Click_2(object sender, EventArgs e)
         {
-            totalSegundos = ((int)numMinutos.Value * 60) + (int)numSegundos.Value;
-            timer9.Start();
-        }
 
-        private void timer9_Tick(object sender, EventArgs e)
-        {
-            if (totalSegundos > 0)
+            if (string.IsNullOrEmpty(Valor.Text))
             {
-                totalSegundos--;
-            
-                this.Text = "Tiempo: " + totalSegundos;
+                MessageBox.Show("Por favor, ingresa un valor.");
+                return;
             }
-            else
+
+            double valor = double.Parse(Valor.Text);
+            double metros = 0;
+            double resultado = 0;
+
+            if (Desde.Text == "Metros")
             {
-                timer9.Stop();
-                MessageBox.Show("¡Tiempo agotado!");
+                metros = valor;
             }
+            else if (Desde.Text == "Centimetros")
+            {
+                metros = valor / 100;
+            }
+            else if (Desde.Text == "Pulgadas")
+            {
+                metros = valor / 39.3701;
+            }
+
+
+            if (Hacia.Text == "Metros")
+            {
+                resultado = metros;
+            }
+            else if (Hacia.Text == "Centimetros")
+            {
+                resultado = metros * 100;
+            }
+            else if (Hacia.Text == "Pulgadas")
+            {
+                resultado = metros * 39.3701;
+            }
+
+
+            MessageBox.Show("El resultado de la conversión es: " + resultado.ToString("N2"));
         }
     }
 
 }
+
+  
+
+
