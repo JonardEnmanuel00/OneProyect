@@ -28,30 +28,34 @@ namespace Practical_Exercises
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(maskedTextBox1.Text)) return;
+
+
+            int numero = int.Parse(maskedTextBox1.Text);
+            int contadorDivisores = 0;
+
+
+            for (int i = 1; i <= numero; i++)
             {
-
-                string palabraOriginal = textBox2.Text.ToLower().Replace(" ", "");
-
-
-                string palabraInversa = "";
-
-    for (int i = palabraOriginal.Length - 1; i >= 0; i--)
+                // El símbolo % nos dice si el residuo es cero (división exacta)
+                if (numero % i == 0)
                 {
-                    palabraInversa += palabraOriginal[i];
-                }
-
-
-                if (palabraOriginal == palabraInversa)
-                {
-                    MessageBox.Show("¡Es un palíndromo!", "Resultado");
-                }
-                else
-                {
-                    MessageBox.Show("No es un palíndromo.", "Resultado");
+                    contadorDivisores++;
                 }
             }
 
+
+            if (contadorDivisores == 2)
+            {
+                MessageBox.Show(numero + " es un número PRIMO.");
+            }
+            else
+            {
+                MessageBox.Show(numero + " NO es un número primo.");
+            }
         }
+
     }
 
 }

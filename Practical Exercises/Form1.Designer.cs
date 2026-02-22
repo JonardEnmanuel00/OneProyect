@@ -44,7 +44,7 @@ namespace Practical_Exercises
             timer7 = new System.Windows.Forms.Timer(components);
             timer8 = new System.Windows.Forms.Timer(components);
             timer9 = new System.Windows.Forms.Timer(components);
-            textBox2 = new TextBox();
+            maskedTextBox1 = new MaskedTextBox();
             button1 = new Button();
             SuspendLayout();
             // 
@@ -69,11 +69,11 @@ namespace Practical_Exercises
             label1.AutoSize = true;
             label1.BackColor = SystemColors.Control;
             label1.Font = new Font("Pink Rose", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(229, 9);
+            label1.Location = new Point(220, 9);
             label1.Name = "label1";
-            label1.Size = new Size(152, 33);
+            label1.Size = new Size(206, 33);
             label1.TabIndex = 0;
-            label1.Text = "Palíndromos";
+            label1.Text = "Números es Primo";
             label1.Click += Label3_Click;
             // 
             // tmrReloj
@@ -84,23 +84,25 @@ namespace Practical_Exercises
             // 
             timer6.Interval = 1000;
             // 
-            // textBox2
+            // maskedTextBox1
             // 
-            textBox2.Font = new Font("Agency FB", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(168, 69);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(273, 39);
-            textBox2.TabIndex = 2;
-            textBox2.TextAlign = HorizontalAlignment.Center;
+            maskedTextBox1.Font = new Font("Agency FB", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            maskedTextBox1.Location = new Point(169, 69);
+            maskedTextBox1.Mask = "00000";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(308, 39);
+            maskedTextBox1.TabIndex = 2;
+            maskedTextBox1.TextAlign = HorizontalAlignment.Center;
+            maskedTextBox1.ValidatingType = typeof(int);
             // 
             // button1
             // 
-            button1.Font = new Font("Agency FB", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(229, 123);
+            button1.Font = new Font("Agency FB", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(220, 124);
             button1.Name = "button1";
-            button1.Size = new Size(152, 58);
+            button1.Size = new Size(206, 46);
             button1.TabIndex = 3;
-            button1.Text = "Verificar";
+            button1.Text = "Verificar Primo";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
             // 
@@ -111,7 +113,7 @@ namespace Practical_Exercises
             BackColor = Color.DarkSlateBlue;
             ClientSize = new Size(650, 565);
             Controls.Add(button1);
-            Controls.Add(textBox2);
+            Controls.Add(maskedTextBox1);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form1";
@@ -139,7 +141,7 @@ namespace Practical_Exercises
         private System.Windows.Forms.Timer timer7;
         private System.Windows.Forms.Timer timer8;
         private System.Windows.Forms.Timer timer9;
-        private TextBox textBox2;
+        private MaskedTextBox maskedTextBox1;
         private Button button1;
     }
 }
