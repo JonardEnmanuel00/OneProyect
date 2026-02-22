@@ -44,9 +44,7 @@ namespace Practical_Exercises
             timer7 = new System.Windows.Forms.Timer(components);
             timer8 = new System.Windows.Forms.Timer(components);
             timer9 = new System.Windows.Forms.Timer(components);
-            Valor = new TextBox();
-            Desde = new ComboBox();
-            Hacia = new ComboBox();
+            textBox2 = new TextBox();
             button1 = new Button();
             SuspendLayout();
             // 
@@ -69,13 +67,13 @@ namespace Practical_Exercises
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = SystemColors.ButtonHighlight;
+            label1.BackColor = SystemColors.Control;
             label1.Font = new Font("Pink Rose", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(178, 9);
+            label1.Location = new Point(229, 9);
             label1.Name = "label1";
-            label1.Size = new Size(262, 33);
+            label1.Size = new Size(152, 33);
             label1.TabIndex = 0;
-            label1.Text = "Conversor De Unidades";
+            label1.Text = "Palíndromos";
             label1.Click += Label3_Click;
             // 
             // tmrReloj
@@ -86,64 +84,38 @@ namespace Practical_Exercises
             // 
             timer6.Interval = 1000;
             // 
-            // timer9
+            // textBox2
             // 
-            timer9.Interval = 100;
-            // 
-            // Valor
-            // 
-            Valor.Font = new Font("Agency FB", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Valor.Location = new Point(178, 65);
-            Valor.Name = "Valor";
-            Valor.Size = new Size(262, 47);
-            Valor.TabIndex = 2;
-            Valor.TextAlign = HorizontalAlignment.Center;
-            // 
-            // Desde
-            // 
-            Desde.FormattingEnabled = true;
-            Desde.Items.AddRange(new object[] { "Metros", "Centimetros", "", "", "Pulgadas" });
-            Desde.Location = new Point(178, 139);
-            Desde.Name = "Desde";
-            Desde.Size = new Size(262, 28);
-            Desde.TabIndex = 3;
-            // 
-            // Hacia
-            // 
-            Hacia.FormattingEnabled = true;
-            Hacia.Items.AddRange(new object[] { "Metros", "", "", "Centimetros", "", "", "Pulgadas" });
-            Hacia.Location = new Point(178, 192);
-            Hacia.Name = "Hacia";
-            Hacia.Size = new Size(262, 28);
-            Hacia.TabIndex = 4;
+            textBox2.Font = new Font("Agency FB", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(168, 69);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(273, 39);
+            textBox2.TabIndex = 2;
+            textBox2.TextAlign = HorizontalAlignment.Center;
             // 
             // button1
             // 
-            button1.BackColor = Color.Gainsboro;
-            button1.Font = new Font("Agency FB", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ControlText;
-            button1.Location = new Point(253, 240);
+            button1.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(188, 114);
             button1.Name = "button1";
-            button1.Size = new Size(126, 56);
-            button1.TabIndex = 5;
-            button1.Text = "Convertir";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_2;
+            button1.Size = new Size(236, 59);
+            button1.TabIndex = 3;
+            button1.Text = "Verificar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkOliveGreen;
+            BackColor = Color.DarkSlateBlue;
             ClientSize = new Size(650, 565);
             Controls.Add(button1);
-            Controls.Add(Hacia);
-            Controls.Add(Desde);
-            Controls.Add(Valor);
+            Controls.Add(textBox2);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form1";
-            Text = "Z";
+            Text = "Jonard";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -167,9 +139,7 @@ namespace Practical_Exercises
         private System.Windows.Forms.Timer timer7;
         private System.Windows.Forms.Timer timer8;
         private System.Windows.Forms.Timer timer9;
-        private TextBox Valor;
-        private ComboBox Desde;
-        private ComboBox Hacia;
+        private TextBox textBox2;
         private Button button1;
     }
 }

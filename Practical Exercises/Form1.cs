@@ -25,49 +25,32 @@ namespace Practical_Exercises
         {
 
         }
-     
-        private void button1_Click_2(object sender, EventArgs e)
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
+            {
 
-            if (string.IsNullOrEmpty(Valor.Text))
-            {
-                MessageBox.Show("Por favor, ingresa un valor.");
-                return;
-            }
-
-            double valor = double.Parse(Valor.Text);
-            double metros = 0;
-            double resultado = 0;
-
-            if (Desde.Text == "Metros")
-            {
-                metros = valor;
-            }
-            else if (Desde.Text == "Centimetros")
-            {
-                metros = valor / 100;
-            }
-            else if (Desde.Text == "Pulgadas")
-            {
-                metros = valor / 39.3701;
-            }
+                string palabraOriginal = textBox2.Text.ToLower().Replace(" ", "");
 
 
-            if (Hacia.Text == "Metros")
-            {
-                resultado = metros;
-            }
-            else if (Hacia.Text == "Centimetros")
-            {
-                resultado = metros * 100;
-            }
-            else if (Hacia.Text == "Pulgadas")
-            {
-                resultado = metros * 39.3701;
-            }
+                string palabraInversa = "";
+
+    for (int i = palabraOriginal.Length - 1; i >= 0; i--)
+                {
+                    palabraInversa += palabraOriginal[i];
+                }
 
 
-            MessageBox.Show("El resultado de la conversión es: " + resultado.ToString("N2"));
+                if (palabraOriginal == palabraInversa)
+                {
+                    MessageBox.Show("¡Es un palíndromo!", "Resultado");
+                }
+                else
+                {
+                    MessageBox.Show("No es un palíndromo.", "Resultado");
+                }
+            }
+
         }
     }
 
