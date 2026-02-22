@@ -14,7 +14,7 @@ namespace Practical_Exercises
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Label3_Click(object sender, EventArgs e)
         {
 
         }
@@ -33,30 +33,42 @@ namespace Practical_Exercises
         }
 
         private void button1_Click_2(object sender, EventArgs e)
-        { 
-            timer5.Start(); 
+        {
+            timer5.Start();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        { 
+        private void Button2_Click(object sender, EventArgs e)
+        {
             timer5.Stop();
         }
 
-        private void timer5_Tick(object sender, EventArgs e)
+
+
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            if (progressBar1.Value < 100)
+
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            int numero = int.Parse(textBox1.Text);
+
+            listBox1.Items.Clear();
+
+            for (int i = 1; i <= 10; i++)
             {
-                progressBar1.Value += 5;
+
+         
+
+            int resultado = numero * i;
+
+            listBox1.Items.Add(numero + " x " + i + " = " + resultado);
+
+
             }
-            else
-            {
-                timer5.Stop();
-                MessageBox.Show("Carga finalizada con éxito");
-            }
+
         }
 
     }
-
 }
-
-
