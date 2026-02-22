@@ -95,10 +95,10 @@ namespace Practical_Exercises
             // 
             // button1
             // 
-            button1.Font = new Font("Agency FB", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(188, 114);
+            button1.Font = new Font("Agency FB", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(229, 123);
             button1.Name = "button1";
-            button1.Size = new Size(236, 59);
+            button1.Size = new Size(152, 58);
             button1.TabIndex = 3;
             button1.Text = "Verificar";
             button1.UseVisualStyleBackColor = true;
