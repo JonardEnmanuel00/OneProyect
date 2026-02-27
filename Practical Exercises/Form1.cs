@@ -26,29 +26,26 @@ namespace Practical_Exercises
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(maskedTextBox1.Text))
-            {
-                int numero = int.Parse(maskedTextBox1.Text);
-                int sumaDivisores = 0;
+            int inicio = int.Parse(textBox2.Text);
+            int fin = int.Parse(textBox3.Text);
+            listBox2.Items.Clear();
 
-                for (int i = 1; i < numero; i++)
+            for (int i = inicio; i <= fin; i++)
+            {
+                if (i < 2) continue;
+
+                int divisores = 0;
+                for (int j = 1; j <= i; j++)
                 {
-                    if (numero % i == 0) sumaDivisores += i;
+                    if (i % j == 0) divisores++;
                 }
 
-                if (sumaDivisores == numero && numero > 0)
-                    MessageBox.Show("¡Es un número perfecto!");
-                else
-                    MessageBox.Show("No es un número perfecto.");
+                if (divisores == 2) listBox2.Items.Add(i);
             }
         }
 
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
     }
 }
 

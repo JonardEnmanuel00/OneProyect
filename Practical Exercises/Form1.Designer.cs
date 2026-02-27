@@ -44,9 +44,11 @@ namespace Practical_Exercises
             timer7 = new System.Windows.Forms.Timer(components);
             timer8 = new System.Windows.Forms.Timer(components);
             timer9 = new System.Windows.Forms.Timer(components);
-            maskedTextBox1 = new MaskedTextBox();
-            button1 = new Button();
             label3 = new Label();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            button2 = new Button();
+            listBox2 = new ListBox();
             SuspendLayout();
             // 
             // label2
@@ -70,11 +72,11 @@ namespace Practical_Exercises
             label1.AutoSize = true;
             label1.BackColor = SystemColors.Control;
             label1.Font = new Font("Pink Rose", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(220, 9);
+            label1.Location = new Point(157, 9);
             label1.Name = "label1";
-            label1.Size = new Size(201, 33);
+            label1.Size = new Size(293, 33);
             label1.TabIndex = 0;
-            label1.Text = "Número Perfecto";
+            label1.Text = "Rango de Números Primos";
             label1.Click += Label3_Click;
             // 
             // tmrReloj
@@ -84,26 +86,6 @@ namespace Practical_Exercises
             // timer6
             // 
             timer6.Interval = 1000;
-            // 
-            // maskedTextBox1
-            // 
-            maskedTextBox1.Font = new Font("Agency FB", 16.2F);
-            maskedTextBox1.Location = new Point(174, 73);
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(281, 39);
-            maskedTextBox1.TabIndex = 2;
-            maskedTextBox1.MaskInputRejected += maskedTextBox1_MaskInputRejected;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Agency FB", 16.2F);
-            button1.Location = new Point(264, 119);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 43);
-            button1.TabIndex = 3;
-            button1.Text = "Verificar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
             // 
             // label3
             // 
@@ -115,15 +97,53 @@ namespace Practical_Exercises
             label3.Size = new Size(0, 36);
             label3.TabIndex = 4;
             // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Agency FB", 18F);
+            textBox2.Location = new Point(99, 71);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(125, 43);
+            textBox2.TabIndex = 5;
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Agency FB", 18F);
+            textBox3.Location = new Point(393, 71);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(125, 43);
+            textBox3.TabIndex = 6;
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Agency FB", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Location = new Point(169, 146);
+            button2.Name = "button2";
+            button2.Size = new Size(270, 44);
+            button2.TabIndex = 7;
+            button2.Text = "Calcular Numeros Primos";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // listBox2
+            // 
+            listBox2.Font = new Font("Agency FB", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listBox2.FormattingEnabled = true;
+            listBox2.Location = new Point(99, 228);
+            listBox2.Name = "listBox2";
+            listBox2.Size = new Size(419, 260);
+            listBox2.TabIndex = 8;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
             ClientSize = new Size(650, 565);
+            Controls.Add(listBox2);
+            Controls.Add(button2);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
             Controls.Add(label3);
-            Controls.Add(button1);
-            Controls.Add(maskedTextBox1);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form1";
@@ -153,5 +173,9 @@ namespace Practical_Exercises
         private System.Windows.Forms.Timer timer9;
         private MaskedTextBox maskedTextBox1;
         private Button button1;
+        private TextBox textBox2;
+        private TextBox textBox3;
+        private Button button2;
+        private ListBox listBox2;
     }
 }
