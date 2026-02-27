@@ -28,27 +28,18 @@ namespace Practical_Exercises
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int inicio = int.Parse(textBox2.Text);
-            int fin = int.Parse(textBox3.Text);
-            listBox2.Items.Clear();
+            string texto = textBox2.Text.Trim();
 
-            for (int i = inicio; i <= fin; i++)
+            if (string.IsNullOrEmpty(texto))
             {
-                if (i < 2) continue;
-
-                int divisores = 0;
-                for (int j = 1; j <= i; j++)
-                {
-                    if (i % j == 0) divisores++;
-                }
-
-                if (divisores == 2) listBox2.Items.Add(i);
+                label4.Text = "Palabras: 0";
+            }
+            else
+            {
+                string[] palabras = texto.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                label4.Text = "Palabras: " + palabras.Length;
             }
         }
-
     }
+
 }
-
-  
-
-

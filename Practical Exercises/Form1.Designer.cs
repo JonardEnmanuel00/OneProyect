@@ -46,9 +46,8 @@ namespace Practical_Exercises
             timer9 = new System.Windows.Forms.Timer(components);
             label3 = new Label();
             textBox2 = new TextBox();
-            textBox3 = new TextBox();
             button2 = new Button();
-            listBox2 = new ListBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label2
@@ -72,11 +71,11 @@ namespace Practical_Exercises
             label1.AutoSize = true;
             label1.BackColor = SystemColors.Control;
             label1.Font = new Font("Pink Rose", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(157, 9);
+            label1.Location = new Point(185, 9);
             label1.Name = "label1";
-            label1.Size = new Size(293, 33);
+            label1.Size = new Size(255, 33);
             label1.TabIndex = 0;
-            label1.Text = "Rango de Números Primos";
+            label1.Text = "Contador de Palabras";
             label1.Click += Label3_Click;
             // 
             // tmrReloj
@@ -99,39 +98,33 @@ namespace Practical_Exercises
             // 
             // textBox2
             // 
-            textBox2.Font = new Font("Agency FB", 18F);
-            textBox2.Location = new Point(99, 71);
+            textBox2.Font = new Font("Agency FB", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(170, 125);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 43);
+            textBox2.Size = new Size(255, 43);
             textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Agency FB", 18F);
-            textBox3.Location = new Point(393, 71);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 43);
-            textBox3.TabIndex = 6;
             // 
             // button2
             // 
             button2.Font = new Font("Agency FB", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(169, 146);
+            button2.Location = new Point(235, 183);
             button2.Name = "button2";
-            button2.Size = new Size(270, 44);
-            button2.TabIndex = 7;
-            button2.Text = "Calcular Numeros Primos";
+            button2.Size = new Size(124, 55);
+            button2.TabIndex = 6;
+            button2.Text = "Contar";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // listBox2
+            // label4
             // 
-            listBox2.Font = new Font("Agency FB", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listBox2.FormattingEnabled = true;
-            listBox2.Location = new Point(99, 228);
-            listBox2.Name = "listBox2";
-            listBox2.Size = new Size(419, 260);
-            listBox2.TabIndex = 8;
+            label4.AutoSize = true;
+            label4.BackColor = Color.Lavender;
+            label4.Font = new Font("Agency FB", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(235, 71);
+            label4.Name = "label4";
+            label4.Size = new Size(125, 44);
+            label4.TabIndex = 7;
+            label4.Text = "Palabras";
             // 
             // Form1
             // 
@@ -139,9 +132,8 @@ namespace Practical_Exercises
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
             ClientSize = new Size(650, 565);
-            Controls.Add(listBox2);
+            Controls.Add(label4);
             Controls.Add(button2);
-            Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -174,8 +166,7 @@ namespace Practical_Exercises
         private MaskedTextBox maskedTextBox1;
         private Button button1;
         private TextBox textBox2;
-        private TextBox textBox3;
         private Button button2;
-        private ListBox listBox2;
+        private Label label4;
     }
 }
