@@ -25,37 +25,51 @@ namespace Practical_Exercises
         {
 
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
+     
+        private void button1_Click_2(object sender, EventArgs e)
         {
-
-            if (string.IsNullOrEmpty(maskedTextBox1.Text)) return;
-
-
-            int numero = int.Parse(maskedTextBox1.Text);
-            int contadorDivisores = 0;
-
-
-            for (int i = 1; i <= numero; i++)
+           
+            if (string.IsNullOrEmpty(Valor.Text))
             {
-                // El símbolo % nos dice si el residuo es cero (división exacta)
-                if (numero % i == 0)
-                {
-                    contadorDivisores++;
-                }
+                MessageBox.Show("Por favor, ingresa un valor.");
+                return;
             }
 
+            double valor = double.Parse(Valor.Text);
+            double metros = 0;
+            double resultado = 0;
 
-            if (contadorDivisores == 2)
+            // 2. PASO A: Convertimos cualquier entrada a METROS (nuestra base)
+            if (Desde.Text == "Metros")
             {
-                MessageBox.Show(numero + " es un número PRIMO.");
+                metros = valor;
             }
-            else
+            else if (Desde.Text == "Centimetros")
             {
-                MessageBox.Show(numero + " NO es un número primo.");
+                metros = valor / 100;
             }
+            else if (Desde.Text == "Pulgadas")
+            {
+                metros = valor / 39.3701;
+            }
+
+            // 3. PASO B: De METROS convertimos a la unidad de destino
+            if (Hacia.Text == "Metros")
+            {
+                resultado = metros;
+            }
+            else if (Hacia.Text == "Centimetros")
+            {
+                resultado = metros * 100;
+            }
+            else if (Hacia.Text == "Pulgadas")
+            {
+                resultado = metros * 39.3701;
+            }
+
+            // 4. Mostramos el resultado
+            MessageBox.Show("El resultado de la conversión es: " + resultado.ToString("N2"));
         }
-
     }
 
 }

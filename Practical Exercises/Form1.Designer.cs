@@ -104,7 +104,7 @@ namespace Practical_Exercises
             button1.TabIndex = 3;
             button1.Text = "Verificar Primo";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            button1.Click += Button1_Click;
             // 
             // Form1
             // 
