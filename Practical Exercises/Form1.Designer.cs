@@ -38,16 +38,12 @@ namespace Practical_Exercises
             timer3 = new System.Windows.Forms.Timer(components);
             timer4 = new System.Windows.Forms.Timer(components);
             timer5 = new System.Windows.Forms.Timer(components);
-            label1 = new Label();
             tmrReloj = new System.Windows.Forms.Timer(components);
             timer6 = new System.Windows.Forms.Timer(components);
             timer7 = new System.Windows.Forms.Timer(components);
             timer8 = new System.Windows.Forms.Timer(components);
             timer9 = new System.Windows.Forms.Timer(components);
             label3 = new Label();
-            textBox2 = new TextBox();
-            button2 = new Button();
-            label4 = new Label();
             SuspendLayout();
             // 
             // label2
@@ -65,18 +61,6 @@ namespace Practical_Exercises
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = SystemColors.Control;
-            label1.Font = new Font("Pink Rose", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(185, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(255, 33);
-            label1.TabIndex = 0;
-            label1.Text = "Contador de Palabras";
-            label1.Click += Label3_Click;
             // 
             // tmrReloj
             // 
@@ -96,48 +80,14 @@ namespace Practical_Exercises
             label3.Size = new Size(0, 36);
             label3.TabIndex = 4;
             // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Agency FB", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(170, 125);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(255, 43);
-            textBox2.TabIndex = 5;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Agency FB", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(235, 183);
-            button2.Name = "button2";
-            button2.Size = new Size(124, 55);
-            button2.TabIndex = 6;
-            button2.Text = "Contar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Lavender;
-            label4.Font = new Font("Agency FB", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(235, 71);
-            label4.Name = "label4";
-            label4.Size = new Size(125, 44);
-            label4.TabIndex = 7;
-            label4.Text = "Palabras";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
             ClientSize = new Size(650, 565);
-            Controls.Add(label4);
-            Controls.Add(button2);
-            Controls.Add(textBox2);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Name = "Form1";
             Text = "Jonard";
             Load += Form1_Load;
@@ -153,7 +103,6 @@ namespace Practical_Exercises
         private System.Windows.Forms.Timer timer3;
         public System.Windows.Forms.Timer timer4;
         public System.Windows.Forms.Timer timer5;
-        private Label label1;
         private Label label3;
         private TextBox textBox1;
         private ListBox listBox1;
@@ -165,8 +114,5 @@ namespace Practical_Exercises
         private System.Windows.Forms.Timer timer9;
         private MaskedTextBox maskedTextBox1;
         private Button button1;
-        private TextBox textBox2;
-        private Button button2;
-        private Label label4;
     }
 }
